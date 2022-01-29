@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{1A99CE31-AF75-430E-92BB-95F009885FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Application", "Application\News.Application.csproj", "{0492CD5B-B946-4983-82C7-5FFAC55E4F14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3C6590E1-09B3-4857-B134-C8EBBF4AE1C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Domain", "Domain\News.Domain.csproj", "{96A62AF9-78D4-4248-8435-FA2B2FC8BCAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{18D9736B-A2E2-42F9-94F9-EF8B8144FC63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E372DF3D-A5AC-4A5C-AED4-856D87404658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Infra.Data", "Infra\Data\News.Infra.Data.csproj", "{4F86FA71-D6F6-4257-87C3-C87B7748028D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{43A0B204-2CF5-4AE8-AC4D-E2502A1098FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Infra.CrossCutting", "Infra\CrossCutting\News.Infra.CrossCutting.csproj", "{AAF54061-8620-4C39-A299-FE30C984B03E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0492CD5B-B946-4983-82C7-5FFAC55E4F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0492CD5B-B946-4983-82C7-5FFAC55E4F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0492CD5B-B946-4983-82C7-5FFAC55E4F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0492CD5B-B946-4983-82C7-5FFAC55E4F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A62AF9-78D4-4248-8435-FA2B2FC8BCAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A62AF9-78D4-4248-8435-FA2B2FC8BCAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A62AF9-78D4-4248-8435-FA2B2FC8BCAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A62AF9-78D4-4248-8435-FA2B2FC8BCAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F86FA71-D6F6-4257-87C3-C87B7748028D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F86FA71-D6F6-4257-87C3-C87B7748028D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F86FA71-D6F6-4257-87C3-C87B7748028D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F86FA71-D6F6-4257-87C3-C87B7748028D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF54061-8620-4C39-A299-FE30C984B03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF54061-8620-4C39-A299-FE30C984B03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF54061-8620-4C39-A299-FE30C984B03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF54061-8620-4C39-A299-FE30C984B03E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0492CD5B-B946-4983-82C7-5FFAC55E4F14} = {1A99CE31-AF75-430E-92BB-95F009885FC8}
+		{96A62AF9-78D4-4248-8435-FA2B2FC8BCAF} = {3C6590E1-09B3-4857-B134-C8EBBF4AE1C3}
+		{E372DF3D-A5AC-4A5C-AED4-856D87404658} = {18D9736B-A2E2-42F9-94F9-EF8B8144FC63}
+		{4F86FA71-D6F6-4257-87C3-C87B7748028D} = {E372DF3D-A5AC-4A5C-AED4-856D87404658}
+		{43A0B204-2CF5-4AE8-AC4D-E2502A1098FE} = {18D9736B-A2E2-42F9-94F9-EF8B8144FC63}
+		{AAF54061-8620-4C39-A299-FE30C984B03E} = {43A0B204-2CF5-4AE8-AC4D-E2502A1098FE}
+	EndGlobalSection
+EndGlobal
