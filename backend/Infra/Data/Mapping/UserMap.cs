@@ -17,16 +17,22 @@ namespace Data.Mapping
                 .HasColumnName("Name")
                 .HasColumnType("VARCHAR(100)");
 
+            builder.Property(prop => prop.UserName)
+                .HasConversion(prop => prop.ToString(), prop => prop)
+                .IsRequired()
+                .HasColumnName("UserName")
+                .HasColumnType("VARCHAR(100)");
+
             builder.Property(prop => prop.Email)
                 .HasConversion(prop => prop.ToString(), prop => prop)
                 .IsRequired()
                 .HasColumnName("Email")
                 .HasColumnType("VARCHAR(200)");
 
-            builder.Property(prop => prop.Senha)
+            builder.Property(prop => prop.Password)
                 .HasConversion(prop => prop.ToString(), prop => prop)
                 .IsRequired()
-                .HasColumnName("PassWord")
+                .HasColumnName("Password")
                 .HasColumnType("VARCHAR(100)");
                 
 
