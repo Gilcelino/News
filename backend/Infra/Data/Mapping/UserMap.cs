@@ -11,17 +11,16 @@ namespace Data.Mapping
             builder.ToTable("user");
             builder.HasKey(prop => prop.Id);
 
+            builder.Property(prop => prop.Id)
+                .UseMySqlIdentityColumn()
+                .HasColumnType("INT(10)");
+
             builder.Property(prop => prop.Name)
                 .HasConversion(prop => prop.ToString(), prop => prop)
                 .IsRequired()
                 .HasColumnName("Name")
                 .HasColumnType("VARCHAR(100)");
 
-            builder.Property(prop => prop.UserName)
-                .HasConversion(prop => prop.ToString(), prop => prop)
-                .IsRequired()
-                .HasColumnName("UserName")
-                .HasColumnType("VARCHAR(100)");
 
             builder.Property(prop => prop.Email)
                 .HasConversion(prop => prop.ToString(), prop => prop)

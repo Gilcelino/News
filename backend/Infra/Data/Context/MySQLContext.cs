@@ -13,7 +13,13 @@ namespace Data.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<User>(new UserMap().Configure);            
+            modelBuilder.Entity<User>(new UserMap().Configure);     
+
+            //não sei se é necessário.
+            modelBuilder.ApplyConfiguration(new UserMap());
+
+
+
         }
     }
 }
