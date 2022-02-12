@@ -1,3 +1,4 @@
+using CrossCutting.Exceptions;
 using Domain.Validators;
 
 namespace Domain.Entities
@@ -47,7 +48,7 @@ namespace Domain.Entities
                     _errors.Add(error.ErrorMessage);
                 }
 
-                throw new Exception(_errors[0]);
+                throw new DomainException("Ocorreu um erro.", _errors);
             }
 
             return true;
