@@ -5,10 +5,10 @@ namespace Domain.Interfaces
 {
     public interface IBaseService<TEntity> where TEntity: BaseEntity
     {
-        TEntity Insert<TValidator>(TEntity obj) where TValidator: AbstractValidator<TEntity>;
-        TEntity Update<TValidator>(TEntity obj) where TValidator: AbstractValidator<TEntity>; 
-        void Delete(int id);
-        IEnumerable<TEntity> GetAll();
-        TEntity GetById (int id);
+        Task<TEntity >Insert<TValidator>(TEntity obj) where TValidator: AbstractValidator<TEntity>;
+        Task<TEntity> Update<TValidator>(TEntity obj) where TValidator: AbstractValidator<TEntity>; 
+        Task Delete(int id);
+        Task<IEnumerable<TEntity>> GetAll();
+        Task<TEntity> GetById (int id);
     }
 }

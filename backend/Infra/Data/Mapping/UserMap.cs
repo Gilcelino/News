@@ -33,7 +33,8 @@ namespace Data.Mapping
                 .IsRequired()
                 .HasColumnName("Password")
                 .HasColumnType("VARCHAR(100)");
-                
+
+            builder.HasIndex(prop=>prop.Email).HasDatabaseName("idx-user-email");               
 
         }
     }

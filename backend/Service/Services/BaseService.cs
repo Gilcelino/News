@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Domain.Entities;
 using Domain.Interfaces;
 using FluentValidation;
@@ -17,25 +14,25 @@ namespace Service.Services
             _baseRepository = baseRepository;
         }
 
-        public TEntity Insert<TValidator>(TEntity obj) where TValidator : AbstractValidator<TEntity>
+        public async Task<TEntity> Insert<TValidator>(TEntity obj) where TValidator : AbstractValidator<TEntity>
         {
             Validate(obj, Activator.CreateInstance<TValidator>());
-            _baseRepository.Insert(obj);
+            await _baseRepository.Insert(obj);
             return obj;
         }
 
-        public TEntity Update<TValidator>(TEntity obj) where TValidator : AbstractValidator<TEntity>
+        public async Task<TEntity> Update<TValidator>(TEntity obj) where TValidator : AbstractValidator<TEntity>
         {
             Validate(obj, Activator.CreateInstance<TValidator>());
-            _baseRepository.Update(obj);
+            await _baseRepository.Update(obj);
             return obj;
         }
 
-        public void Delete(int id) => _baseRepository.Delete(id);
+        public Task Delete(int id) => _baseRepository.Delete(id);
 
-        public IEnumerable<TEntity> GetAll() => _baseRepository.GetAll();
+        public Task<IEnumerable<TEntity>> GetAll() => _baseRepository.GetAll();
 
-        public TEntity GetById(int id) => _baseRepository.GetById(id);
+        public Task< TEntity> GetById(int id) => _baseRepository.GetById(id);
 
         private void Validate(TEntity obj, AbstractValidator<TEntity> Validator)
         {   
@@ -46,5 +43,6 @@ namespace Service.Services
 
             Validator.ValidateAndThrow(obj);
         }
+
     }
 }

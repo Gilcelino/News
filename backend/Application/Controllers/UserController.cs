@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Service.Validators;
 
 namespace Application.Controllers
 {
@@ -30,7 +28,7 @@ namespace Application.Controllers
                 return NotFound();
             }
 
-            return Execute(() => _baseUserService.Insert<UserValidator>(user));
+            return Execute(() => _baseUserService.AbstractValidator<>(user));
         }
 
         [HttpPut]

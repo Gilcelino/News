@@ -37,7 +37,8 @@ namespace Infra.Data.Repository
             if (obj != null )
             {
                 _mySQLContext.Set<TEntity>().Remove(obj);
-               await _mySQLContext.SaveChangesAsync();
+                await _mySQLContext.SaveChangesAsync();
+               
             }            
         }
 
