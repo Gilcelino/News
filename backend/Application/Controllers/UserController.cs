@@ -23,7 +23,7 @@ namespace Application.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] User user)
+        public Task<IActionResult> Create([FromBody] User user)
         {
             if (user == null)
             {
